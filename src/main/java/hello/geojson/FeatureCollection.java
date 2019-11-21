@@ -11,6 +11,7 @@ public class FeatureCollection {
   public String type;
   private static Logger logger = LoggerFactory.getLogger(FeatureCollection.class);
   public Metadata metadata;
+  public List<Feature> features;
 
   /**
      * Create a FeatureCollection object from json representation
