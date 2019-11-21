@@ -5,6 +5,8 @@ A simple Spring Boot webapp using:
 
 Heroku Link: https://cs56-f19-lab07-anseljackbobo.herokuapp.com
 
+Github page: https://github.com/ucsb-cs56-f19/lab07-Anseljackbobo
+
 Javadoc Link: https://ucsb-cs56-f19.github.io/lab07-Anseljackbobo/
 # Running on Localhost.
 
