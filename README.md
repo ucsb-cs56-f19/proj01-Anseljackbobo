@@ -8,6 +8,8 @@ Heroku Link: https://cs56-f19-lab07-anseljackbobo.herokuapp.com
 Github page: https://github.com/ucsb-cs56-f19/lab07-Anseljackbobo
 
 Javadoc Link: https://ucsb-cs56-f19.github.io/lab07-Anseljackbobo/
+
+Travis-CI page: https://travis-ci.org/ucsb-cs56-f19/lab07-Anseljackbobo
 # Running on Localhost.
 
 1.  You *must first* configure a GitHub OAuth app for http://localhost:8080 and obtain the client-id and client-secret.
