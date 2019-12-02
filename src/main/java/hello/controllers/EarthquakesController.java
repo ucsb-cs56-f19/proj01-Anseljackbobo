@@ -14,7 +14,7 @@ import java.util.HashMap;
 import com.nimbusds.oauth2.sdk.client.ClientReadRequest;
 
 import hello.services.EarthquakeQueryService;
-import hello.EqSearch;
+import hello.searches.EqSearch;
 
 @Controller
 public class EarthquakesController {
