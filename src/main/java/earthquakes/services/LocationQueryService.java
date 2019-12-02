@@ -24,7 +24,7 @@ public class LocationQueryService {
     private Logger logger = LoggerFactory.getLogger(LocationQueryService.class);
 
     public String getJSON(String location) {
-        /* RestTemplate restTemplate = new RestTemplate();
+        RestTemplate restTemplate = new RestTemplate();
 
         HttpHeaders headers = new HttpHeaders();
         headers.setAccept(Arrays.asList(MediaType.APPLICATION_JSON));
@@ -50,13 +50,7 @@ public class LocationQueryService {
             retVal = "{\"error\": \"401: Unauthorized\"}";
         }
         logger.info("from LocationQueryService.getJSON: " + retVal);
-        return retVal; */
-
-         String fakeJson = "{ \"key\": \"value\" }";
-         String json = fakeJson;
-         logger.info("json=" + json);
-         return json;
-
+        return retVal;
     }
 
 }
