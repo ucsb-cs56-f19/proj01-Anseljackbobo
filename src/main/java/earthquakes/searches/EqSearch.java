@@ -1,4 +1,7 @@
-package hello;
+package earthquakes.searches;
+
+
+
 public class EqSearch {
     private int distance;
     private int minmag;
