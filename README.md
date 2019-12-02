@@ -7,7 +7,7 @@ Heroku App Link: https://cs56-f19-proj01-anseljackbobo.herokuapp.com
 
 Github page: https://github.com/ucsb-cs56-f19/proj01-Anseljackbobo
 
-Javadoc Link: https://ucsb-cs56-f19.github.io/lab07-Anseljackbobo/
+Javadoc Link: https://ucsb-cs56-f19.github.io/proj01-Anseljackbobo
 
 Travis-CI page: https://travis-ci.org/ucsb-cs56-f19/proj01-Anseljackbobo
 # Running on Localhost.
