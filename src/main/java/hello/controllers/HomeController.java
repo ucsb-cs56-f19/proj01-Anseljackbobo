@@ -1,4 +1,4 @@
-package hello;
+package hello.controllers;
 import hello.geojson.FeatureCollection;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
@@ -14,13 +14,7 @@ import java.util.HashMap;
 import com.nimbusds.oauth2.sdk.client.ClientReadRequest;
 
 @Controller
-public class WebController {
-
-    @GetMapping("/earthquakes/search")
-    public String getEarthquakesSearch(Model model, OAuth2AuthenticationToken oAuth2AuthenticationToken,
-            EqSearch eqSearch) {
-        return "earthquakes/search";
-    }
+public class HomeController {
 
     @Autowired
     private ClientRegistrationRepository clientRegistrationRepository;
@@ -30,18 +24,7 @@ public class WebController {
         return "index";
     }
 
-    @GetMapping("/earthquakes/results")
-    public String getEarthquakesResults(Model model, OAuth2AuthenticationToken oAuth2AuthenticationToken,
-            EqSearch eqSearch) {
-        EarthquakeQueryService e =
-            new EarthquakeQueryService();
-        model.addAttribute("eqSearch", eqSearch);
-        String json = e.getJSON(eqSearch.getDistance(), eqSearch.getMinmag());
-        model.addAttribute("json", json);
-        FeatureCollection featureCollection = FeatureCollection.fromJSON(json);
-        model.addAttribute("featureCollection",featureCollection);
-        return "earthquakes/results";
-    }
+    
     
     @GetMapping("/login")
     public String getLoginPage(Model model, OAuth2AuthenticationToken oAuth2AuthenticationToken) {
@@ -57,15 +40,4 @@ public class WebController {
         return "login";
     }
 
-    @GetMapping("/page1")
-    public String getPage1(Model model, OAuth2AuthenticationToken oAuth2AuthenticationToken) {
-
-        return "page1";
-    }
-
-    @GetMapping("/page2")
-    public String getPage2(Model model, OAuth2AuthenticationToken oAuth2AuthenticationToken) {
-
-        return "page2";
-    }
 }
