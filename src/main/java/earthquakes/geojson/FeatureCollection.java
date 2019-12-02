@@ -27,6 +27,7 @@ public class FeatureCollection {
             objectMapper.configure(DeserializationFeature.FAIL_ON_UNKNOWN_PROPERTIES, false);
 
             FeatureCollection featureCollection = objectMapper.readValue(json, FeatureCollection.class);
+            
             return featureCollection;
         } catch (JsonProcessingException jpe) {
             logger.error("JsonProcessingException:" + jpe);

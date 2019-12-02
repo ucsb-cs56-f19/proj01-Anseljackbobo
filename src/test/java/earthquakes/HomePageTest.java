@@ -75,24 +75,24 @@ public class HomePageTest {
     public void getHomePage_hasEarthquakes() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.TEXT_HTML))
                 .andExpect(status().isOk())
-                .andExpect(xpath("/html/body/div/nav/div/ul/li[2]/a").exists())
-                .andExpect(xpath("/html/body/div/nav/div/ul/li[2]/a").string("Earthquake Search"));
+                .andExpect(xpath("/html/body/div/nav/div/ul/li[1]/a").exists())
+                .andExpect(xpath("/html/body/div/nav/div/ul/li[1]/a").string("Earthquake Search"));
     }
 
     @Test
     public void getHomePage_hasUsers() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.TEXT_HTML))
                 .andExpect(status().isOk())
-                .andExpect(xpath("/html/body/div/nav/div/ul/li[4]/a").exists())
-                .andExpect(xpath("/html/body/div/nav/div/ul/li[4]/a").string("Users"));
+                .andExpect(xpath("/html/body/div/nav/div/ul/li[3]/a").exists())
+                .andExpect(xpath("/html/body/div/nav/div/ul/li[3]/a").string("Users"));
     }
 
     @Test
     public void getHomePage_hasLocationsLink() throws Exception {
         mvc.perform(MockMvcRequestBuilders.get("/").accept(MediaType.TEXT_HTML))
                 .andExpect(status().isOk())
-                .andExpect(xpath("/html/body/div/nav/div/ul[1]/li[3]/a").exists())
-                .andExpect(xpath("/html/body/div/nav/div/ul[1]/li[3]/a").string("Locations"));
+                .andExpect(xpath("/html/body/div/nav/div/ul[1]/li[2]/a").exists())
+                .andExpect(xpath("/html/body/div/nav/div/ul[1]/li[2]/a").string("Locations"));
     }
 
 
