@@ -52,10 +52,10 @@ public class LocationQueryService {
         logger.info("from LocationQueryService.getJSON: " + retVal);
         return retVal; */
 
-        String fakeJson = "{ \"key\": \"value\" }";
-        String json = fakeJson;
-        logger.info("json=" + json);
-        return json;
+         String fakeJson = "{ \"key\": \"value\" }";
+         String json = fakeJson;
+         logger.info("json=" + json);
+         return json;
 
     }
 
