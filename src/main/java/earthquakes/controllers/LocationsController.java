@@ -1,7 +1,8 @@
 package earthquakes.controllers;
 
+import earthquakes.osm.Place;
 
-import earthquakes.geojson.FeatureCollection;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
 import org.springframework.security.oauth2.client.registration.ClientRegistration;
@@ -41,6 +42,9 @@ public class LocationsController {
         // TODO: Actually do the search here and add results to the model
         String json = e.getJSON(locSearch.getLocation());
         model.addAttribute("json", json);
+        List<Place> place = Place.listFromJSON(json);
+        model.addAttribute("place",place);
+
         return "locations/results";
     }
     
