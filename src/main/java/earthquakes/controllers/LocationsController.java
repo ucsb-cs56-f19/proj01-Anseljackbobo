@@ -20,6 +20,8 @@ import com.nimbusds.oauth2.sdk.client.ClientReadRequest;
 import earthquakes.searches.LocSearch;
 import java.util.List;
 import earthquakes.services.LocationQueryService;
+import earthquakes.repositories.LocationRepository;
+import earthquakes.entities.Location;
 @Controller
 public class LocationsController {
 
@@ -48,5 +50,14 @@ public class LocationsController {
         return "locations/results";
     }
     
-    
+    @Autowired
+    private LocationRepository locationRepository;
+
+    @GetMapping("/locations")
+    public String index(Model model, OAuth2AuthenticationToken token) {
+        String uid = token.getPrincipal().getAttributes().get("id").toString();
+        Iterable<Location> locations= locationRepository.findByPlaceId(uid);
+        model.addAttribute("locations", locations);
+        return "locations/index";
+    }
 }
