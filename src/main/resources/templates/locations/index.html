@@ -1,14 +1,14 @@
 <!DOCTYPE HTML>
 <html xmlns:th="http://www.thymeleaf.org" lang="en"> 
   <head>
-    <title>Locations Search Results</title>
+    <title>Favorite Locations</title>
     <div th:replace="bootstrap/bootstrap_head.html"></div>
   </head>
   <body>
     <div class="container">
       <div th:replace="bootstrap/bootstrap_nav_header.html"></div>
 
-      <h1>Location Search Results</h1>
+      <h1>Favorite Locations</h1>
 	      <table class="table">
 	          <thead>
 	              <tr>
@@ -27,6 +27,7 @@
 	                <td th:text="${u.name}"></td>
 	                <td th:text="${u.latitude}"></td>
 	                <td th:text="${u.longitude}"></td>
+									<td><a th:href="@{/earthquakes/search/(lat=${u.latitude},lon=${u.longitude},location=${u.name})}">Get Earthquakes</a> </td>
 	                
 	              </tr>
 	          </tbody>
